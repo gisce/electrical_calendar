@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
-from workalendar.core import WesternCalendar, ChristianMixin
-from workalendar.core import MON, TUE, WED, THU, FRI, SAT, SUN
+from workalendar.core import WesternCalendar, ChristianMixin, MON, TUE, WED, THU, FRI, SAT, SUN
 
 from datetime import datetime
 
@@ -11,20 +10,9 @@ import logging
 logger = logging.getLogger(__name__)
 
 
-
-class REECalendar (WesternCalendar, ChristianMixin):
-    "REE Spanish Electrical Network (Red Eléctrica de España) Calendar"
-    include_epiphany = False
-    include_immaculate_conception = True
-    include_good_friday = True
-    include_assumption = True
-    include_all_saints = True
-
-    FIXED_HOLIDAYS = WesternCalendar.FIXED_HOLIDAYS + (
-        (5, 1, u"Día del trabajador"),
-        (10, 12, u"Fiesta nacional de España"),
-        (12, 6, u"Día de la Constitución Española")
-    )
+class ChristianMixin(ChristianMixin):
+    def get_version(self):
+        print "Version "
 
     def get_same_holiday(self, current, past, day):
         """
@@ -105,4 +93,27 @@ class REECalendar (WesternCalendar, ChristianMixin):
              return False
 
         return True
+
+
+
+
+class REECalendar (WesternCalendar, ChristianMixin):
+    "REE Spanish Electrical Network (Red Eléctrica de España) Calendar"
+
+    include_immaculate_conception = True
+    include_assumption = True
+    include_all_saints = True
+
+    include_epiphany = False
+    include_good_friday = False
+    include_christmas = False
+
+
+
+    FIXED_HOLIDAYS = WesternCalendar.FIXED_HOLIDAYS + (
+        (10, 12, "National Day"),
+        (12, 6, "Constitution Day")
+    )
+
+
 
