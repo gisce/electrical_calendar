@@ -132,6 +132,7 @@ class OMIECalendar (REECalendar):
         (5, 2, "Workers Day next monday"),
         (5, 16, "Second Easter monday"),
         (7, 25, "St Santiago - Galicia National Day"),
+        (11, 9, "St Almudena"),
         (12,26, "St Stephen")
     )
 
