@@ -11,7 +11,7 @@ It's important to say that the Electrical sector have a peculiar set of holidays
 
 Just import it    # WIP pip installer [issue #1]
 ```
-from electrical_calendar.electrical_calendar import REECalendar
+from electrical_calendar.electrical_calendar import REECalendar, OMIECalendar
 ``` 
 
 and 
@@ -19,8 +19,15 @@ and
 from datetime import datetime
 #logging.basicConfig(level=logging.DEBUG)
 
-from electrical_calendar.electrical_calendar import REECalendar
+
+
+# Electrical Spanish Network Calendar aka Red Electrica de España
 ree_cal = REECalendar()
+
+# OMIE Spanish Electrical Market Calendar
+omie_cal = OMIECalendar()
+
+
 
 # Get all holidays for 2016
 print ree_cal.holidays(2016)
