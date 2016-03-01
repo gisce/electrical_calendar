@@ -52,6 +52,6 @@ ree_cal.is_worable(day)
 
 ## Example of use
 
-[GIST usage example](https://gist.github.com/XaviTorello/3b90b44983986a751685)
+[GIST usage example](https://gist.github.com/XaviTorello/2491c7b4e7a6f82c2118)
 
 
