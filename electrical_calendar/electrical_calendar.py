@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 from workalendar.core import WesternCalendar, ChristianMixin, MON, TUE, WED, THU, FRI, SAT, SUN
 
-from datetime import datetime
+from datetime import datetime, date, timedelta
 
 from isoweek import Week
 
@@ -64,7 +64,6 @@ class ChristianMixin(ChristianMixin):
         return  Week(year, week).day(weekday)
 
 
-
     def get_next_weekend_day(self,year, week, weekday):
         """
         Get the next weekend day. If entering date is friday or a weekend day, get the first workday of the next week
@@ -96,7 +95,6 @@ class ChristianMixin(ChristianMixin):
 
 
 
-
 class REECalendar (WesternCalendar, ChristianMixin):
     "REE Spanish Electrical Network (Red Eléctrica de España) Calendar"
 
@@ -108,11 +106,33 @@ class REECalendar (WesternCalendar, ChristianMixin):
     include_good_friday = False
     include_christmas = False
 
-
-
     FIXED_HOLIDAYS = WesternCalendar.FIXED_HOLIDAYS + (
         (10, 12, "National Day"),
         (12, 6, "Constitution Day")
+    )
+
+
+
+## Forced heritance to ensure correctly propagation of changes from ERRCalendar
+class OMIECalendar (REECalendar):
+    "OMIE (Spanish Electrical Market) Calendar"
+
+    include_immaculate_conception = True
+    include_assumption = True
+    include_all_saints = True
+
+    include_epiphany = True
+    include_holy_thursday = True
+    include_good_friday = True
+
+    include_easter_monday = False
+    include_christmas = False
+
+    FIXED_HOLIDAYS = REECalendar.FIXED_HOLIDAYS + (
+        (5, 2, "Workers Day next monday"),
+        (5, 16, "Second Easter monday"),
+        (7, 25, "St Santiago - Galicia National Day"),
+        (12,26, "St Stephen")
     )
 
 
