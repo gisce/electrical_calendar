@@ -1,4 +1,6 @@
 # -*- coding: utf-8 -*-
+__author__ = 'XaviTorello'
+
 from workalendar.core import WesternCalendar, ChristianMixin, MON, TUE, WED, THU, FRI, SAT, SUN
 
 from datetime import datetime, date, timedelta
