@@ -5,7 +5,7 @@ __author__ = 'XaviTorello'
 from expects import *
 from expects.testing import failure
 
-from electrical_calendar import OMIECalendar, OMIECalendar
+from electrical_calendar import OMIECalendar
 import datetime
 
 with description("A REE Calendar"):
@@ -107,7 +107,7 @@ with description("A REE Calendar"):
                 day=datetime.date(2016,12,7)
                 assert omie_cal.is_holiday(day) == False
 
-                day=datetime.date(2014,04,3)
+                day=datetime.date(2014,4,3)
                 assert omie_cal.is_holiday(day) == False
 
 
@@ -120,5 +120,3 @@ with description("A REE Calendar"):
             omie_cal = OMIECalendar()
             day=datetime.date(2016,2,27)
             assert omie_cal.is_workable(day) == False
-
-
