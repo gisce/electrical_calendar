@@ -13,5 +13,11 @@ setup(
     packages=find_packages(),
     install_requires=INSTALL_REQUIRES,
     license='General Public Licence 3',
-    provides=['electrical_calendar']
+    provides=['electrical_calendar'],
+    classifiers = [
+        "Programming Language :: Python",
+        "Programming Language :: Python :: 2.7",
+        "Programming Language :: Python :: 3",
+        "Programming Language :: Python :: 3.5"
+    ]
 )
