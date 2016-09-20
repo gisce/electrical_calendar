@@ -1,13 +1,20 @@
 sudo: false
 language: python
 python:
-  - "2.7"
-  - "3.5"
+- '2.7'
+- '3.5'
 install:
-  - pip install -r requirements.txt
-  - pip install -r requirements-dev.txt
-  - pip install -e .
-  - pip list
+- pip install -r requirements.txt
+- pip install -r requirements-dev.txt
+- pip install -e .
+- pip list
 script:
-  - mamba
-  - pip list
+- mamba
+- pip list
+deploy:
+  provider: pypi
+  user: xtorello
+  password:
+    secure: qeF94h/ALMtGVLUxgOrj1+vzh1U4oXqg+AnlpRLjRXvXRS26nM9On5xUnXOYkQHFa3fwKJ2JzkXhllU5M+LHYXnv4/gIV4iA8AdgTjPGw3iJblPVF7YyA/reTH4wWXto3ChKHQAHHq2ymT4IiZXrZ3a61ksBt/l+8TRMZt1jh+geio0saSLyh9d+5DriYMR/JPgli6nVw28v7ffOpCjRNkzDygNDaCMPOyGx9ErbDRkClgO9GdtmTdINA0TD2Ep1X2Wr17CUiGI5yuAh9Mc4FItFj32pqU0jQT5nk85xtWffcWx7j2fPkWvmLOA92G8uknhMO2aDtdIs7pBSbUpm9kiIH7iw5IKfpCmXvsbjtH5A1MoJgCyuGGt+LD2m2e0s3dkLaMHA0FSBNjtHKERKX5bOCxDW1eGe5Ywc6/7YFlr71iRur8uKctCC7aGxqS+mfwqFeNWxoI3rmWpsZAetggi1gCcmA90CLadaUSc7E6emY/1RyGs3hge/eMF+xhBPUaDmYNwfhFh4DExe8iNdCuDr86LJnoBs9mRc+34V2aykeeSTKBPvGWJaMz7nmESudcPuNwHPh2FueQYmOxjPTSDrMEgH0K6kEKyatRy2HKCNZk+0698wCwTRRrS6JvsMP3HVIVJWAvWIfpG36HwVFdUeHcE8dciGztIxVrP5od8=
+  on:
+    branch: master
