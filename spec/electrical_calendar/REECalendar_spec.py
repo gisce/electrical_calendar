@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 __author__ = 'XaviTorello'
 
-
 from expects import *
 from expects.testing import failure
 
@@ -58,7 +57,7 @@ with description("A REE Calendar"):
                 day=datetime.date(2016,12,7)
                 assert ree_cal.is_holiday(day) == False
 
-                day=datetime.date(2014,04,3)
+                day=datetime.date(2014,4,3)
                 assert ree_cal.is_holiday(day) == False
 
 
@@ -71,5 +70,3 @@ with description("A REE Calendar"):
             ree_cal = REECalendar()
             day=datetime.date(2016,2,27)
             assert ree_cal.is_workable(day) == False
-
-
