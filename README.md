@@ -1,3 +1,5 @@
+![Build Status](https://api.travis-ci.org/gisce/electrical_calendar.svg)
+
 # Electrical Calendar
 
 Provides a simple way to identify the electrical sector holidays and workdays using workalendar. 
