@@ -112,6 +112,7 @@ class REECalendar (WesternCalendar, ChristianMixin):
     include_christmas = False
 
     FIXED_HOLIDAYS = WesternCalendar.FIXED_HOLIDAYS + (
+        (5, 1, "Worker's Day"),
         (10, 12, "National Day"),
         (12, 6, "Constitution Day")
     )
