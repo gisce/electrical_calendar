@@ -4,4 +4,4 @@ __author__ = 'XaviTorello'
 from .electrical import REECalendar
 from .omie import OMIECalendar
 
-__version__ = 0.4
+__version__ = 0.5
