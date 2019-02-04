@@ -19,7 +19,7 @@ with description("A REE Calendar"):
         with it ('for 2016 will return the expected holidays'):
             ree_cal = REECalendar()
             holidays = ree_cal.holidays(2016)
-            expected_holidays = [(datetime.date(2016, 1, 1), 'New year'), (datetime.date(2016, 8, 15), 'Assumption of Mary to Heaven'), (datetime.date(2016, 10, 12), 'National Day'), (datetime.date(2016, 11, 1), 'All Saints Day'), (datetime.date(2016, 12, 6), 'Constitution Day'), (datetime.date(2016, 12, 8), 'Immaculate Conception')]
+            expected_holidays = [(datetime.date(2016, 1, 1), 'New year'), (datetime.date(2016, 5, 1), "Worker's Day"), (datetime.date(2016, 8, 15), 'Assumption of Mary to Heaven'), (datetime.date(2016, 10, 12), 'National Day'), (datetime.date(2016, 11, 1), 'All Saints Day'), (datetime.date(2016, 12, 6), 'Constitution Day'), (datetime.date(2016, 12, 8), 'Immaculate Conception')]
 
             assert len(holidays) == len(expected_holidays)
 
@@ -28,7 +28,7 @@ with description("A REE Calendar"):
         with it ('for 2017 will return the expected holidays'):
             ree_cal = REECalendar()
             holidays = ree_cal.holidays(2017)
-            expected_holidays = [(datetime.date(2017, 1, 1), 'New year'), (datetime.date(2017, 8, 15), 'Assumption of Mary to Heaven'), (datetime.date(2017, 10, 12), 'National Day'), (datetime.date(2017, 11, 1), 'All Saints Day'), (datetime.date(2017, 12, 6), 'Constitution Day'), (datetime.date(2017, 12, 8), 'Immaculate Conception')]
+            expected_holidays = [(datetime.date(2017, 1, 1), 'New year'), (datetime.date(2017, 5, 1), "Worker's Day"), (datetime.date(2017, 8, 15), 'Assumption of Mary to Heaven'), (datetime.date(2017, 10, 12), 'National Day'), (datetime.date(2017, 11, 1), 'All Saints Day'), (datetime.date(2017, 12, 6), 'Constitution Day'), (datetime.date(2017, 12, 8), 'Immaculate Conception')]
 
             assert len(holidays) == len(expected_holidays)
 
