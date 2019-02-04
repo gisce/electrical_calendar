@@ -36,7 +36,7 @@ class ChristianMixin(ChristianMixin):
 
         index = -1
 
-        for idx, holiday in enumerate(self._holidays[year_current]):
+        for idx, holiday in enumerate(self.holidays(year_current)):
             if holiday[0].day == day_current and holiday[0].month == month_current:
                 index = idx
 
