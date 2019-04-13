@@ -24,10 +24,16 @@ with description("A REE Calendar"):
             assert len(holidays) == len(expected_holidays)
             for idx,holiday in enumerate(holidays):
                 assert holiday == expected_holidays[idx]
+
         with it ('for 2017 will return the expected holidays'):
             ree_cal = REECalendar()
             holidays = ree_cal.holidays(2017)
-            expected_holidays = [(datetime.date(2017, 1, 1), 'New year'), (datetime.date(2017, 5, 1), "Worker's Day"), (datetime.date(2017, 8, 15), 'Assumption of Mary to Heaven'), (datetime.date(2017, 10, 12), 'National Day'), (datetime.date(2017, 11, 1), 'All Saints Day'), (datetime.date(2017, 12, 6), 'Constitution Day'), (datetime.date(2017, 12, 8), 'Immaculate Conception')]
+            expected_holidays = [(datetime.date(2017, 1, 1), 'New year'), (datetime.date(2017, 4, 14), 'Good Friday'), (datetime.date(2017, 5, 1), "Worker's Day"), (datetime.date(2017, 8, 15), 'Assumption of Mary to Heaven'), (datetime.date(2017, 10, 12), 'National Day'), (datetime.date(2017, 11, 1), 'All Saints Day'), (datetime.date(2017, 12, 6), 'Constitution Day'), (datetime.date(2017, 12, 8), 'Immaculate Conception'), (datetime.date(2017, 12, 25), 'Christmas Day')]
+            
+            assert len(holidays) == len(expected_holidays)
+            for idx, holiday in enumerate(expected_holidays):
+                assert holiday == expected_holidays[idx]
+
 
             assert len(holidays) == len(expected_holidays)
 
