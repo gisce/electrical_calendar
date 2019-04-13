@@ -44,7 +44,12 @@ with description("A REE Calendar"):
             for idx,holiday in enumerate(holidays):
                 assert holiday == expected_holidays[idx]
 
+        with it ('for 2019 will return the expected holidays'):
+            ree_cal = REECalendar()
+            holidays = ree_cal.holidays(2019)
+            expected_holidays = [(datetime.date(2019, 1, 1), 'New year'), (datetime.date(2019, 4, 19), 'Good Friday'), (datetime.date(2019, 5, 1), "Worker's Day"), (datetime.date(2019, 8, 15), 'Assumption of Mary to Heaven'), (datetime.date(2019, 10, 12), 'National Day'), (datetime.date(2019, 11, 1), 'All Saints Day'), (datetime.date(2019, 12, 6), 'Constitution Day'), (datetime.date(2019, 12, 8), 'Immaculate Conception'), (datetime.date(2019, 12, 25), 'Christmas Day')]
 
+            assert len(holidays) == len(expected_holidays)
             for idx,holiday in enumerate(holidays):
                 assert holiday == expected_holidays[idx]
 
