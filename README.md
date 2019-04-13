@@ -13,7 +13,7 @@ It's important to say that the Electrical sector have a peculiar set of holidays
 
 Just import it    # WIP pip installer [issue #1]
 ```
-from electrical_calendar.electrical_calendar import REECalendar, OMIECalendar
+from electrical_calendar import REECalendar, OMIECalendar
 ``` 
 
 and 

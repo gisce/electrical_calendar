@@ -108,8 +108,8 @@ class REECalendar (WesternCalendar, ChristianMixin):
     include_all_saints = True
 
     include_epiphany = False
-    include_good_friday = False
-    include_christmas = False
+    include_good_friday = True
+    include_christmas = True
 
     FIXED_HOLIDAYS = WesternCalendar.FIXED_HOLIDAYS + (
         (5, 1, "Worker's Day"),
