@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 from setuptools import setup, find_packages
 
-INSTALL_REQUIRES = ['workalendar', 'isoweek']
+INSTALL_REQUIRES = ['workalendar<8.0.0', 'isoweek']
 
 setup(
     name='electrical_calendar',
