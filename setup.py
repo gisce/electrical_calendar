@@ -6,7 +6,7 @@ INSTALL_REQUIRES = ['workalendar<8.0.0', 'isoweek']
 setup(
     name='electrical_calendar',
     description='Electrical sector holidays and workdays using workalendar. Spain and Portugal data',
-    version='0.6',
+    version='0.7',
     url='https://www.gisce.net',
     author='GISCE Enginyeria, SL',
     author_email='devel@gisce.net',
