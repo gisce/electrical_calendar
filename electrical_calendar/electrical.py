@@ -41,11 +41,16 @@ class ChristianMixin(ChristianMixin):
                 index = idx
 
         if index != -1:
-            same_holiday = self._holidays[year][index]
-            logger.debug("  - Found same holiday: {}/{}/{} [{}]".format(year, same_holiday[
-                         0].month, same_holiday[0].day, self._holidays[year][index][1]))
+            y = year
+            if current.day(day).year > current.year:
+                y += 1
+            if y not in self._holidays:
+                self.holidays_set(y)
+            same_holiday = self._holidays[y][index]
+            logger.debug("  - Found same holiday: {}/{}/{} [{}]".format(y, same_holiday[
+                         0].month, same_holiday[0].day, self._holidays[y][index][1]))
 
-            return datetime(year, same_holiday[0].month, same_holiday[0].day)
+            return datetime(y, same_holiday[0].month, same_holiday[0].day)
 
         return None
 
